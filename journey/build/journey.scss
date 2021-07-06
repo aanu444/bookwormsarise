@@ -1,0 +1,713 @@
+//Importing primary font:
+@import url("https://fonts.googleapis.com/css2?family=Righteous&display=swap");
+
+//mixins
+@mixin nowrap {
+  display: flex;
+  flex-flow: row nowrap;
+}
+
+@mixin wrap {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+//variables
+$font: "Righteous", cursive;
+$textColor: #232322;
+$primaryColor: #140d2e;
+$secondaryColor: #e8e1ca;
+$auxColor: #323131;
+$linkColor: #828080;
+
+//Start of Scss code
+* {
+  font-family: $font;
+  ::before,
+  ::after {
+    box-sizing: border-box;
+  }
+}
+
+div {
+  border: 0px solid #000;
+}
+
+//320px screen size
+nav {
+  .links {
+    @include nowrap;
+    min-height: 10.3vh;
+    background-color: $primaryColor;
+
+    .link-base {
+      flex-basis: 100%;
+
+      ul {
+        list-style-type: none;
+
+        li {
+          display: inline;
+
+          a {
+            text-decoration: none;
+            color: $secondaryColor;
+            font-size: 0.9rem;
+            margin-left: 5px;
+          }
+        }
+      }
+    }
+  }
+}
+
+main {
+  section {
+    .white-space {
+      @include nowrap;
+      height: 5.3vh;
+
+      .white-space-base {
+        flex-basis: 100%;
+      }
+    }
+
+    .journey-intro {
+      @include nowrap;
+      height: 10.3vh;
+
+      .journey-intro-base {
+        flex-basis: 100%;
+
+        h1 {
+          color: $textColor;
+          font-size: 1rem;
+          text-align: center;
+        }
+      }
+    }
+
+    .journey {
+      @include nowrap;
+      background-color: $secondaryColor;
+      min-height: 10.3vh;
+      width: 90%;
+      margin-left: auto;
+      margin-right: auto;
+
+      .img {
+        flex-basis: 20%;
+
+        .bwa-img {
+          width: 100%;
+          height: 100%;
+        }
+      }
+
+      .text {
+        flex-basis: 80%;
+
+        p {
+          text-align: justify;
+          color: $primaryColor;
+          font-size: 0.7rem;
+          padding: 2px;
+
+          .bg-show {
+            display: none;
+          }
+        }
+      }
+
+      .text-01 {
+        flex-basis: 100%;
+
+        p {
+          color: $primaryColor;
+          text-align: center;
+          font-size: 0.7rem;
+        }
+      }
+    }
+
+    .journey-01 {
+      @include nowrap;
+      background-color: $textColor;
+      min-height: 10.3vh;
+      width: 90%;
+      margin-left: auto;
+      margin-right: auto;
+
+      .img {
+        flex-basis: 40%;
+
+        .bwa-img {
+          width: 100%;
+          height: 100%;
+        }
+      }
+
+      .text {
+        flex-basis: 60%;
+
+        p {
+          color: $secondaryColor;
+          font-size: 0.7rem;
+          text-align: justify;
+          font-weight: lighter;
+          padding: 3px;
+
+          .bg-show {
+            display: none;
+          }
+        }
+      }
+    }
+
+    .team {
+      @include wrap;
+      min-height: 10.3vh;
+      background-color: $textColor;
+
+      .team-txt {
+        flex-basis: 100%;
+        p {
+          color: $secondaryColor;
+          font-size: 0.9rem;
+          text-align: center;
+        }
+      }
+
+      .team-img {
+        flex-basis: 22%;
+        flex-grow: 2;
+
+        .img {
+          width: 100%;
+          display: block;
+        }
+
+        p {
+          text-align: center;
+          font-size: 0.5rem;
+          color: $secondaryColor;
+        }
+      }
+    }
+  }
+}
+
+footer {
+  .footer {
+    @include nowrap;
+    height: 10.3vh;
+    background-color: $primaryColor;
+
+    .footer-base {
+      flex-basis: 100%;
+
+      p {
+        color: $secondaryColor;
+        text-align: center;
+        font-size: 1rem;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 375px) {
+  nav {
+    .links {
+      .link-base {
+        ul {
+          li {
+            a {
+              margin-left: 14px;
+            }
+          }
+          li:first-child {
+            margin-left: 10px;
+          }
+        }
+      }
+    }
+  }
+
+  main {
+    section {
+      .journey-intro {
+        .journey-intro-base {
+          h1 {
+            font-size: 1.3rem;
+          }
+        }
+      }
+
+      .journey {
+        .text {
+          p {
+            font-size: 0.8rem;
+          }
+        }
+
+        .text-01 {
+          p {
+            font-size: 0.8rem;
+          }
+        }
+      }
+
+      .journey-01 {
+        .text {
+          p {
+            font-size: 0.8rem;
+          }
+        }
+      }
+
+      .team {
+        .team-txt {
+          p {
+            font-size: 1.1rem;
+          }
+        }
+
+        .team-img {
+          p {
+            font-size: 0.6rem;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 425px) {
+  .container {
+    max-width: 425px;
+    margin: auto;
+  }
+
+  nav {
+    .links {
+      .link-base {
+        ul {
+          li {
+            a {
+              margin-left: 20px;
+            }
+          }
+          li:first-child {
+            margin-left: 15px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 550px) {
+  main {
+    section {
+      .journey-intro {
+        .journey-intro-base {
+          h1 {
+            font-size: 1.5rem;
+          }
+        }
+      }
+
+      .journey {
+        .text {
+          p {
+            font-size: 0.9rem;
+            padding: 10px;
+          }
+        }
+
+        .text-01 {
+          p {
+            font-size: 0.9rem;
+            padding: 10px;
+          }
+        }
+      }
+
+      .journey-01 {
+        .text {
+          p {
+            font-size: 0.9rem;
+            padding: 10px;
+
+            .bg-show {
+              display: inline;
+            }
+          }
+        }
+      }
+
+      .team {
+        .team-txt {
+          p {
+            font-size: 1.3rem;
+          }
+        }
+
+        .team-img {
+          p {
+            font-size: 0.7rem;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .container {
+    max-width: 768px;
+    margin: auto;
+  }
+
+  nav {
+    .links {
+      .link-base {
+        ul {
+          li {
+            a {
+              font-size: 1.1rem;
+            }
+          }
+          li:first-child {
+            margin-left: 35%;
+          }
+        }
+      }
+    }
+  }
+
+  main {
+    section {
+      .journey-intro {
+        .journey-intro-base {
+          h1 {
+            font-size: 1.7rem;
+          }
+        }
+      }
+
+      .journey {
+        .text {
+          p {
+            font-size: 1rem;
+            padding: 10px;
+          }
+        }
+
+        .text-01 {
+          p {
+            font-size: 1rem;
+            padding: 10px;
+          }
+        }
+      }
+
+      .journey-01 {
+        .text {
+          p {
+            font-size: 1rem;
+            padding: 10px;
+
+            .bg-show {
+              display: inline;
+            }
+          }
+        }
+      }
+
+      .team {
+        .team-txt {
+          p {
+            font-size: 1.4rem;
+          }
+        }
+
+        .team-img {
+          p {
+            font-size: 0.8rem;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .container {
+    max-width: 1024px;
+    margin: auto;
+  }
+
+  nav {
+    .links {
+      .link-base {
+        ul {
+          li {
+            a {
+              font-size: 1.5rem;
+            }
+          }
+          li:first-child {
+            margin-left: 25%;
+          }
+        }
+      }
+    }
+  }
+
+  main {
+    section {
+      .journey-intro {
+        .journey-intro-base {
+          h1 {
+            font-size: 1.8rem;
+          }
+        }
+      }
+
+      .journey {
+        .text {
+          p {
+            font-size: 1.1rem;
+            padding: 10px;
+
+            .bg-show {
+              display: inline;
+            }
+          }
+        }
+
+        .text-01 {
+          p {
+            font-size: 1.3rem;
+            padding: 10px;
+          }
+        }
+      }
+
+      .journey-01 {
+        .text {
+          p {
+            font-size: 1.3rem;
+            padding: 10px;
+
+            .bg-show {
+              display: inline;
+            }
+          }
+        }
+      }
+
+      .team {
+        .team-txt {
+          p {
+            font-size: 1.5rem;
+          }
+        }
+
+        .team-img {
+          p {
+            font-size: 1rem;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 1440px) {
+  .container {
+    max-width: 1440px;
+    margin: auto;
+  }
+
+  nav {
+    .links {
+      .link-base {
+        ul {
+          li {
+            a {
+              font-size: 1.8rem;
+            }
+          }
+          li:first-child {
+            margin-left: 30%;
+          }
+        }
+      }
+    }
+  }
+
+  main {
+    section {
+      .journey-intro {
+        .journey-intro-base {
+          h1 {
+            font-size: 2rem;
+          }
+        }
+      }
+
+      .journey {
+        .text {
+          p {
+            font-size: 1.5rem;
+            padding: 20px;
+
+            .bg-show {
+              display: inline;
+            }
+          }
+        }
+
+        .text-01 {
+          p {
+            font-size: 1.6rem;
+            padding: 10px;
+          }
+        }
+      }
+
+      .journey-01 {
+        .text {
+          p {
+            font-size: 1.8rem;
+            padding: 30px;
+
+            .bg-show {
+              display: inline;
+            }
+          }
+        }
+      }
+
+      .team {
+        .team-txt {
+          p {
+            font-size: 1.7rem;
+          }
+        }
+
+        .team-img {
+          p {
+            font-size: 1.2rem;
+            margin-top: -10px;
+          }
+        }
+      }
+    }
+  }
+
+  footer {
+    .footer {
+      .footer-base {
+        p {
+          font-size: 1.5rem;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 2560px) {
+  .container {
+    max-width: 2560px;
+    margin: auto;
+  }
+
+  nav {
+    .links {
+      .link-base {
+        ul {
+          li {
+            a {
+              font-size: 2.8rem;
+            }
+          }
+          li:first-child {
+            margin-left: 35%;
+          }
+        }
+      }
+    }
+  }
+
+  main {
+    section {
+      .journey-intro {
+        .journey-intro-base {
+          h1 {
+            font-size: 3.6rem;
+          }
+        }
+      }
+
+      .journey {
+        .text {
+          p {
+            font-size: 2.6rem;
+            padding: 20px;
+
+            .bg-show {
+              display: inline;
+            }
+          }
+        }
+
+        .text-01 {
+          p {
+            font-size: 2.8rem;
+          }
+        }
+      }
+
+      .journey-01 {
+        .text {
+          p {
+            font-size: 3rem;
+            padding: 40px;
+
+            .bg-show {
+              display: inline;
+            }
+          }
+        }
+      }
+
+      .team {
+        .team-txt {
+          p {
+            font-size: 3.7rem;
+          }
+        }
+
+        .team-img {
+          p {
+            font-size: 2.2rem;
+            margin-top: -20px;
+          }
+        }
+      }
+    }
+  }
+
+  footer {
+    .footer {
+      .footer-base {
+        p {
+          font-size: 2.5rem;
+        }
+      }
+    }
+  }
+}

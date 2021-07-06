@@ -1,0 +1,667 @@
+//Importing primary font:
+@import url("https://fonts.googleapis.com/css2?family=Righteous&display=swap");
+
+//mixins
+@mixin nowrap {
+  display: flex;
+  flex-flow: row nowrap;
+}
+
+@mixin wrap {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+//variables
+$font: "Righteous", cursive;
+$textColor: #232322;
+$primaryColor: #140d2e;
+$secondaryColor: #e8e1ca;
+$auxColor: #323131;
+$linkColor: #828080;
+
+//Start of Scss code
+* {
+  font-family: $font;
+  ::before,
+  ::after {
+    box-sizing: border-box;
+  }
+}
+
+div {
+  border: 0px solid #000;
+}
+
+//320px screen size
+nav {
+  .links {
+    @include nowrap;
+    min-height: 10.3vh;
+    background-color: $primaryColor;
+
+    .link-base {
+      flex-basis: 100%;
+
+      ul {
+        list-style-type: none;
+
+        li {
+          display: inline;
+
+          a {
+            text-decoration: none;
+            color: $secondaryColor;
+            font-size: 0.9rem;
+            margin-left: 5px;
+          }
+
+          #about {
+            color: $linkColor;
+          }
+        }
+      }
+    }
+  }
+}
+
+header {
+  .header {
+    @include nowrap;
+    min-height: 21.6vh;
+
+    .header-base {
+      flex-basis: 100%;
+
+      h1 {
+        color: $textColor;
+        text-align: center;
+        font-size: 1.3rem;
+      }
+    }
+  }
+}
+
+main {
+  section {
+    .mission-statement {
+      @include nowrap;
+      min-height: 40.6vh;
+      background-color: $secondaryColor;
+
+      .mission-text {
+        flex-basis: 50%;
+
+        p {
+          color: $primaryColor;
+          font-size: 1rem;
+          margin-left: 20px;
+          margin-top: 50px;
+        }
+      }
+
+      .mission-img {
+        flex-basis: 50%;
+
+        .reader-mission-img {
+          width: 100%;
+        }
+      }
+    }
+
+    .vision-statement {
+      @include nowrap;
+      min-height: 40.6vh;
+      background-color: $auxColor;
+
+      .vision-img {
+        flex-basis: 50%;
+
+        .reader-vision-img {
+          width: 100%;
+        }
+      }
+
+      .vision-text {
+        flex-basis: 50%;
+
+        p {
+          color: $secondaryColor;
+          font-size: 0.95rem;
+          margin-top: 50px;
+        }
+      }
+    }
+
+    .journey-container {
+      @include nowrap;
+      min-height: 25.6vh;
+      background-image: url("images/journey-intro.jpg");
+      background-repeat: no-repeat;
+      background-size: cover;
+
+      .journey-base {
+        flex-basis: 100%;
+        background-color: rgba(20, 13, 46, 0.3);
+
+        .journey-button {
+          width: 30%;
+          border-radius: 10px;
+          border: 1px solid #fff;
+          margin-right: auto;
+          margin-left: auto;
+          margin-top: 20%;
+
+          p {
+            font-size: 0.6rem;
+            text-align: center;
+
+            a {
+              text-decoration: none;
+              color: $secondaryColor;
+            }
+          }
+        }
+      }
+    }
+
+    .info-container {
+      @include nowrap;
+      min-height: 6.3vh;
+
+      .info-base {
+        flex-basis: 100%;
+
+        p {
+          color: $textColor;
+          font-size: 0.7rem;
+          text-align: center;
+        }
+      }
+    }
+
+    .country-base {
+      @include nowrap;
+      min-height: 10.3vh;
+
+      .country-img {
+        flex-basis: 33.33%;
+
+        .countries {
+          width: 100%;
+        }
+      }
+    }
+    .bg-show {
+      display: none;
+    }
+  }
+}
+
+footer {
+  .footer {
+    @include nowrap;
+    height: 10.3vh;
+    background-color: $primaryColor;
+
+    .footer-base {
+      flex-basis: 100%;
+
+      p {
+        color: $secondaryColor;
+        text-align: center;
+        font-size: 1rem;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 375px) {
+  nav {
+    .links {
+      .link-base {
+        ul {
+          li {
+            a {
+              margin-left: 14px;
+            }
+          }
+          li:first-child {
+            margin-left: 10px;
+          }
+        }
+      }
+    }
+  }
+
+  header {
+    .header {
+      .header-base {
+        h1 {
+          font-size: 1.5rem;
+        }
+      }
+    }
+  }
+
+  main {
+    section {
+      .mission-statement {
+        .mission-text {
+          p {
+            font-size: 1.2rem;
+          }
+        }
+      }
+
+      .vision-statement {
+        .vision-text {
+          p {
+            font-size: 1.1rem;
+          }
+        }
+      }
+
+      .journey-container {
+        min-height: 30vh;
+      }
+
+      .info-container {
+        .info-base {
+          p {
+            font-size: 0.8rem;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 425px) {
+  .container {
+    max-width: 425px;
+    margin: auto;
+  }
+
+  nav {
+    .links {
+      .link-base {
+        ul {
+          li {
+            a {
+              margin-left: 20px;
+            }
+          }
+          li:first-child {
+            margin-left: 15px;
+          }
+        }
+      }
+    }
+  }
+
+  header {
+    .header {
+      .header-base {
+        h1 {
+          font-size: 1.7rem;
+        }
+      }
+    }
+  }
+
+  main {
+    section {
+      .mission-statement {
+        .mission-text {
+          p {
+            font-size: 1.3rem;
+            margin-left: 30px;
+          }
+        }
+      }
+
+      .vision-statement {
+        .vision-text {
+          p {
+            font-size: 1.15rem;
+          }
+        }
+      }
+
+      .journey-container {
+        min-height: 33vh;
+      }
+
+      .info-container {
+        .info-base {
+          p {
+            font-size: 0.9rem;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .container {
+    max-width: 768px;
+    margin: auto;
+  }
+
+  nav {
+    .links {
+      .link-base {
+        ul {
+          li {
+            a {
+              font-size: 1.1rem;
+            }
+          }
+          li:first-child {
+            margin-left: 35%;
+          }
+        }
+      }
+    }
+  }
+
+  header {
+    .header {
+      .header-base {
+        h1 {
+          font-size: 2rem;
+        }
+      }
+    }
+  }
+
+  main {
+    section {
+      .mission-statement {
+        .mission-text {
+          p {
+            font-size: 2.5rem;
+            margin-left: 40px;
+            margin-top: 30%;
+          }
+        }
+      }
+
+      .vision-statement {
+        .vision-text {
+          p {
+            font-size: 2.2rem;
+            margin-top: 30%;
+          }
+        }
+      }
+
+      .journey-container {
+        min-height: 55vh;
+      }
+
+      .info-container {
+        .info-base {
+          p {
+            font-size: 1.1rem;
+          }
+        }
+      }
+
+      .country-base {
+        .country-img {
+          flex-basis: 16.6%;
+        }
+      }
+      .bg-show {
+        display: block;
+      }
+    }
+    #country-two {
+      display: none;
+    }
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .container {
+    max-width: 1024px;
+    margin: auto;
+  }
+
+  nav {
+    .links {
+      .link-base {
+        ul {
+          li {
+            a {
+              font-size: 1.5rem;
+            }
+          }
+          li:first-child {
+            margin-left: 25%;
+          }
+        }
+      }
+    }
+  }
+
+  header {
+    .header {
+      .header-base {
+        h1 {
+          font-size: 2.8rem;
+        }
+      }
+    }
+  }
+
+  main {
+    section {
+      .mission-statement {
+        .mission-text {
+          p {
+            font-size: 3.8rem;
+            margin-left: 40px;
+          }
+        }
+      }
+
+      .vision-statement {
+        .vision-text {
+          p {
+            font-size: 2.8rem;
+          }
+        }
+      }
+
+      .journey-container {
+        min-height: 65vh;
+        .journey-base {
+          .journey-button {
+            p {
+              font-size: 1.2rem;
+            }
+          }
+        }
+      }
+
+      .info-container {
+        .info-base {
+          p {
+            font-size: 1.3rem;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 1440px) {
+  .container {
+    max-width: 1440px;
+    margin: auto;
+  }
+
+  nav {
+    .links {
+      .link-base {
+        ul {
+          li {
+            a {
+              font-size: 1.8rem;
+            }
+          }
+          li:first-child {
+            margin-left: 30%;
+          }
+        }
+      }
+    }
+  }
+
+  header {
+    .header {
+      .header-base {
+        h1 {
+          font-size: 4rem;
+        }
+      }
+    }
+  }
+
+  main {
+    section {
+      .mission-statement {
+        .mission-text {
+          p {
+            font-size: 4.5rem;
+            margin-left: 45px;
+          }
+        }
+      }
+
+      .vision-statement {
+        .vision-text {
+          p {
+            font-size: 3.8rem;
+          }
+        }
+      }
+
+      .journey-container {
+        min-height: 65vh;
+        .journey-base {
+          .journey-button {
+            p {
+              font-size: 1.2rem;
+            }
+          }
+        }
+      }
+
+      .info-container {
+        .info-base {
+          p {
+            font-size: 1.5rem;
+          }
+        }
+      }
+    }
+  }
+
+  footer {
+    .footer {
+      .footer-base {
+        p {
+          font-size: 1.5rem;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 2560px) {
+  .container {
+    max-width: 2560px;
+    margin: auto;
+  }
+
+  nav {
+    .links {
+      .link-base {
+        ul {
+          li {
+            a {
+              font-size: 2.8rem;
+            }
+          }
+          li:first-child {
+            margin-left: 35%;
+          }
+        }
+      }
+    }
+  }
+
+  header {
+    .header {
+      .header-base {
+        h1 {
+          font-size: 6.5rem;
+        }
+      }
+    }
+  }
+
+  main {
+    section {
+      .mission-statement {
+        .mission-text {
+          p {
+            font-size: 9.8rem;
+            margin-left: 80px;
+          }
+        }
+      }
+
+      .vision-statement {
+        .vision-text {
+          p {
+            font-size: 7.8rem;
+          }
+        }
+      }
+
+      .journey-container {
+        .journey-base {
+          .journey-button {
+            p {
+              font-size: 4rem;
+            }
+          }
+        }
+      }
+
+      .info-container {
+        .info-base {
+          p {
+            font-size: 2.8rem;
+          }
+        }
+      }
+    }
+  }
+
+  footer {
+    .footer {
+      .footer-base {
+        p {
+          font-size: 2.5rem;
+        }
+      }
+    }
+  }
+}

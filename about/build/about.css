@@ -1,0 +1,439 @@
+@import url("https://fonts.googleapis.com/css2?family=Righteous&display=swap");
+* {
+  font-family: "Righteous", cursive;
+}
+
+* ::before,
+* ::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+div {
+  border: 0px solid #000;
+}
+
+nav .links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  min-height: 10.3vh;
+  background-color: #140d2e;
+}
+
+nav .links .link-base {
+  -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
+}
+
+nav .links .link-base ul {
+  list-style-type: none;
+}
+
+nav .links .link-base ul li {
+  display: inline;
+}
+
+nav .links .link-base ul li a {
+  text-decoration: none;
+  color: #e8e1ca;
+  font-size: 0.9rem;
+  margin-left: 5px;
+}
+
+nav .links .link-base ul li #about {
+  color: #828080;
+}
+
+header .header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  min-height: 21.6vh;
+}
+
+header .header .header-base {
+  -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
+}
+
+header .header .header-base h1 {
+  color: #232322;
+  text-align: center;
+  font-size: 1.3rem;
+}
+
+main section .mission-statement {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  min-height: 40.6vh;
+  background-color: #e8e1ca;
+}
+
+main section .mission-statement .mission-text {
+  -ms-flex-preferred-size: 50%;
+      flex-basis: 50%;
+}
+
+main section .mission-statement .mission-text p {
+  color: #140d2e;
+  font-size: 1rem;
+  margin-left: 20px;
+  margin-top: 50px;
+}
+
+main section .mission-statement .mission-img {
+  -ms-flex-preferred-size: 50%;
+      flex-basis: 50%;
+}
+
+main section .mission-statement .mission-img .reader-mission-img {
+  width: 100%;
+}
+
+main section .vision-statement {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  min-height: 40.6vh;
+  background-color: #323131;
+}
+
+main section .vision-statement .vision-img {
+  -ms-flex-preferred-size: 50%;
+      flex-basis: 50%;
+}
+
+main section .vision-statement .vision-img .reader-vision-img {
+  width: 100%;
+}
+
+main section .vision-statement .vision-text {
+  -ms-flex-preferred-size: 50%;
+      flex-basis: 50%;
+}
+
+main section .vision-statement .vision-text p {
+  color: #e8e1ca;
+  font-size: 0.95rem;
+  margin-top: 50px;
+}
+
+main section .journey-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  min-height: 25.6vh;
+  background-image: url("images/journey-intro.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+main section .journey-container .journey-base {
+  -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
+  background-color: rgba(20, 13, 46, 0.3);
+}
+
+main section .journey-container .journey-base .journey-button {
+  width: 30%;
+  border-radius: 10px;
+  border: 1px solid #fff;
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 20%;
+}
+
+main section .journey-container .journey-base .journey-button p {
+  font-size: 0.6rem;
+  text-align: center;
+}
+
+main section .journey-container .journey-base .journey-button p a {
+  text-decoration: none;
+  color: #e8e1ca;
+}
+
+main section .info-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  min-height: 6.3vh;
+}
+
+main section .info-container .info-base {
+  -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
+}
+
+main section .info-container .info-base p {
+  color: #232322;
+  font-size: 0.7rem;
+  text-align: center;
+}
+
+main section .country-base {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  min-height: 10.3vh;
+}
+
+main section .country-base .country-img {
+  -ms-flex-preferred-size: 33.33%;
+      flex-basis: 33.33%;
+}
+
+main section .country-base .country-img .countries {
+  width: 100%;
+}
+
+main section .bg-show {
+  display: none;
+}
+
+footer .footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  height: 10.3vh;
+  background-color: #140d2e;
+}
+
+footer .footer .footer-base {
+  -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
+}
+
+footer .footer .footer-base p {
+  color: #e8e1ca;
+  text-align: center;
+  font-size: 1rem;
+}
+
+@media only screen and (min-width: 375px) {
+  nav .links .link-base ul li a {
+    margin-left: 14px;
+  }
+  nav .links .link-base ul li:first-child {
+    margin-left: 10px;
+  }
+  header .header .header-base h1 {
+    font-size: 1.5rem;
+  }
+  main section .mission-statement .mission-text p {
+    font-size: 1.2rem;
+  }
+  main section .vision-statement .vision-text p {
+    font-size: 1.1rem;
+  }
+  main section .journey-container {
+    min-height: 30vh;
+  }
+  main section .info-container .info-base p {
+    font-size: 0.8rem;
+  }
+}
+
+@media only screen and (min-width: 425px) {
+  .container {
+    max-width: 425px;
+    margin: auto;
+  }
+  nav .links .link-base ul li a {
+    margin-left: 20px;
+  }
+  nav .links .link-base ul li:first-child {
+    margin-left: 15px;
+  }
+  header .header .header-base h1 {
+    font-size: 1.7rem;
+  }
+  main section .mission-statement .mission-text p {
+    font-size: 1.3rem;
+    margin-left: 30px;
+  }
+  main section .vision-statement .vision-text p {
+    font-size: 1.15rem;
+  }
+  main section .journey-container {
+    min-height: 33vh;
+  }
+  main section .info-container .info-base p {
+    font-size: 0.9rem;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .container {
+    max-width: 768px;
+    margin: auto;
+  }
+  nav .links .link-base ul li a {
+    font-size: 1.1rem;
+  }
+  nav .links .link-base ul li:first-child {
+    margin-left: 35%;
+  }
+  header .header .header-base h1 {
+    font-size: 2rem;
+  }
+  main section .mission-statement .mission-text p {
+    font-size: 2.5rem;
+    margin-left: 40px;
+    margin-top: 30%;
+  }
+  main section .vision-statement .vision-text p {
+    font-size: 2.2rem;
+    margin-top: 30%;
+  }
+  main section .journey-container {
+    min-height: 55vh;
+  }
+  main section .info-container .info-base p {
+    font-size: 1.1rem;
+  }
+  main section .country-base .country-img {
+    -ms-flex-preferred-size: 16.6%;
+        flex-basis: 16.6%;
+  }
+  main section .bg-show {
+    display: block;
+  }
+  main #country-two {
+    display: none;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .container {
+    max-width: 1024px;
+    margin: auto;
+  }
+  nav .links .link-base ul li a {
+    font-size: 1.5rem;
+  }
+  nav .links .link-base ul li:first-child {
+    margin-left: 25%;
+  }
+  header .header .header-base h1 {
+    font-size: 2.8rem;
+  }
+  main section .mission-statement .mission-text p {
+    font-size: 3.8rem;
+    margin-left: 40px;
+  }
+  main section .vision-statement .vision-text p {
+    font-size: 2.8rem;
+  }
+  main section .journey-container {
+    min-height: 65vh;
+  }
+  main section .journey-container .journey-base .journey-button p {
+    font-size: 1.2rem;
+  }
+  main section .info-container .info-base p {
+    font-size: 1.3rem;
+  }
+}
+
+@media only screen and (min-width: 1440px) {
+  .container {
+    max-width: 1440px;
+    margin: auto;
+  }
+  nav .links .link-base ul li a {
+    font-size: 1.8rem;
+  }
+  nav .links .link-base ul li:first-child {
+    margin-left: 30%;
+  }
+  header .header .header-base h1 {
+    font-size: 4rem;
+  }
+  main section .mission-statement .mission-text p {
+    font-size: 4.5rem;
+    margin-left: 45px;
+  }
+  main section .vision-statement .vision-text p {
+    font-size: 3.8rem;
+  }
+  main section .journey-container {
+    min-height: 65vh;
+  }
+  main section .journey-container .journey-base .journey-button p {
+    font-size: 1.2rem;
+  }
+  main section .info-container .info-base p {
+    font-size: 1.5rem;
+  }
+  footer .footer .footer-base p {
+    font-size: 1.5rem;
+  }
+}
+
+@media only screen and (min-width: 2560px) {
+  .container {
+    max-width: 2560px;
+    margin: auto;
+  }
+  nav .links .link-base ul li a {
+    font-size: 2.8rem;
+  }
+  nav .links .link-base ul li:first-child {
+    margin-left: 35%;
+  }
+  header .header .header-base h1 {
+    font-size: 6.5rem;
+  }
+  main section .mission-statement .mission-text p {
+    font-size: 9.8rem;
+    margin-left: 80px;
+  }
+  main section .vision-statement .vision-text p {
+    font-size: 7.8rem;
+  }
+  main section .journey-container .journey-base .journey-button p {
+    font-size: 4rem;
+  }
+  main section .info-container .info-base p {
+    font-size: 2.8rem;
+  }
+  footer .footer .footer-base p {
+    font-size: 2.5rem;
+  }
+}
+/*# sourceMappingURL=about.css.map */

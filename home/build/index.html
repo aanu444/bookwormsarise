@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="owner" content="Bookworms Arise Bookclub">
+    <meta name="author" content="Omolola Odunowo">
+    <meta name="theme-color" content="#140d2e">
+    <link rel="manifest" href="manifest.json">
+    <link rel="preconnect" href="https://drive.google.com/file/d/1N89GSq5wGyybGOS4R0GrTkERmE0d9rkU/view?usp=sharing" crossorigin="anonymous">
+    <link rel="preconnect" href="https://forms.gle/E3LAkqpM8LjCsPgP9" crossorigin="anonymous">
+    <link rel="preload" as="style" href="index.css">
+    <link rel="stylesheet" href="index.css">
+    <title>Bookworms Arise</title>
+</head>
+
+<body>
+
+    <header>
+        <div class="main-header">
+            <div class="main-subhead-one">
+                <h1>A<br>Digital<br>Bookclub<br>Connecting<br>African<br>Readers</h1>
+            </div>
+            <div class="main-subhead-two">
+                <div class="header-img-base">
+                    <img src="images/logo.png" alt="bwa-logo" class="bwa-logo">
+                    <img src="images/header-img.png" alt="header-img" class="header-img">
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <nav>
+        <div class="links">
+            <div class="link-base">
+                <ul>
+                    <li> <a href="#" id="home">Home </a></li>
+                    <li><a href="../../about/build/about.html">About </a></li>
+                    <li><a href="../../team/build/team.html">Our Team </a></li>
+                    <li><a href="../../bookclub/build/bookclub.html">Bookclub </a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+  <div class="container">
+    <section id="one">
+    <div class="club-guide-container">
+            <div class="club-guide">
+                <div class="club-guide-base">
+                    <div class="club-guide-img">
+                        <img src="images/club-guide.png" alt="club-guide" id="club-guide" loading="lazy">
+                    </div>
+                    <div class="club-guide-content">
+                        <p> <a href="#">Read Our Club Guide Here</a></p>
+                     <span> This guide was prepared to inform you on all you need to know about our 
+                            Pan African Bookclub. You get to know our moderators, club rules, our partners
+                        and who we are. </span> 
+                    <button> <a href="https://drive.google.com/file/d/1N89GSq5wGyybGOS4R0GrTkERmE0d9rkU/view?usp=sharing"> Read Guide</a></button> 
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="two">
+    <div class="white-space-container">
+        <div class="white-space">
+    
+        </div>
+    </div>
+    </section>
+
+    <main>
+        <div class="onboarding-container">
+            <div class="onboarding-text">
+                <h2> Onboarding<br>2021</h2>
+                <button> <a href="https://forms.gle/E3LAkqpM8LjCsPgP9">Sign Up</a></button>
+            </div>
+            <div class="onboarding-img">
+                <img src="images/onboarding.png" alt="onboarding" class="onboarding">
+            </div>
+        </div>
+    </main>
+
+</div>
+
+    <footer>
+        <div class="white-space">
+            <div class="white-space-base">
+
+            </div>
+        </div>
+        
+        <div class="footer-container">
+            <div class="footer">
+                <p>© 2021 Bookworms Arise</p>
+            </div>
+        </div>
+    </footer>
+
+<script>
+    //Service worker set-up
+
+    if ("serviceWorker" in navigator) {
+            window.addEventListener("load", function () {
+                navigator.serviceWorker.register("service_worker.js")
+                    .then(function (reg) {
+                        if (reg.installing) {
+                            console.log("SW Installing");
+                        } else if (reg.waiting) {
+                            console.log("SW waiting");
+                        } else if (reg.active) {
+                            console.log("SW Activated");
+                        }
+                    }).catch(function (error) {
+                        //This shows if the registration failed from promise
+                        console.log("Registration failed with " + error);
+                    });
+            })}
+
+</script>
+</body>
+
+</html>
