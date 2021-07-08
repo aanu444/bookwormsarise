@@ -130,8 +130,8 @@ section .club-guide-container .club-guide .club-guide-base .club-guide-img {
   -ms-flex-preferred-size: 50%;
       flex-basis: 50%;
   border-radius: 20px 0 0 20px;
-  -webkit-box-shadow: 5px 10px 8px 10px #888888;
-          box-shadow: 5px 10px 8px 10px #888888;
+  -webkit-box-shadow: 0px 0px 10px 4px #888888;
+          box-shadow: 0px 0px 10px 4px #888888;
 }
 
 section .club-guide-container .club-guide .club-guide-base .club-guide-img #club-guide {
@@ -144,8 +144,8 @@ section .club-guide-container .club-guide .club-guide-base .club-guide-content {
       flex-basis: 50%;
   background-color: #726e6b;
   border-radius: 0 20px 20px 0;
-  -webkit-box-shadow: 5px 10px 8px 6px #888888;
-          box-shadow: 5px 10px 8px 6px #888888;
+  -webkit-box-shadow: 0px 0px 10px 4px #888888;
+          box-shadow: 0px 0px 10px 4px #888888;
 }
 
 section .club-guide-container .club-guide .club-guide-base .club-guide-content p a {
@@ -266,7 +266,28 @@ footer .footer-container .footer p {
   text-align: center;
 }
 
+@media only screen and (min-width: 360px) {
+  header .main-header .main-subhead-one h1 {
+    font-size: 1.6rem;
+    margin-top: 30px;
+    margin-left: 50px;
+  }
+  nav .links .link-base ul li:first-child {
+    margin-left: 22px;
+  }
+  section .club-guide-container .club-guide .club-guide-base .club-guide-content p a {
+    font-size: 1.3rem;
+    text-align: center;
+    margin-top: 40px;
+  }
+}
+
 @media only screen and (min-width: 375px) {
+  header .main-header .main-subhead-one h1 {
+    font-size: 1.8rem;
+    margin-top: 40px;
+    margin-left: 50px;
+  }
   nav .links .link-base ul li:first-child {
     margin-left: 25px;
   }
