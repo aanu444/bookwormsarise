@@ -1,0 +1,849 @@
+//Importing primary font:
+@import url("https://fonts.googleapis.com/css2?family=Righteous&display=swap");
+
+//mixins
+@mixin flex {
+  display: flex;
+  flex-flow: row nowrap;
+}
+@mixin club-guide-image {
+  border-radius: 20px 0 0 20px;
+  box-shadow: 5px 10px 8px 10px #888888;
+}
+@mixin club-guide-text {
+  border-radius: 0 20px 20px 0;
+  box-shadow: 5px 10px 8px 6px #888888;
+}
+
+//variables
+$font: "Righteous", cursive;
+$primaryColor: #140d2e;
+$secondaryColor: #e8e1ca;
+$auxColor: #828080;
+$fauxColor: #726e6b;
+$darkShade: #323131;
+
+//Start of Scss code
+* {
+  font-family: $font;
+  ::before,
+  ::after {
+    box-sizing: border-box;
+  }
+}
+
+div {
+  border: 0px solid #000;
+}
+
+//320px screen size
+
+header {
+  .main-header {
+    @include flex;
+    background-color: $secondaryColor;
+    color: $primaryColor;
+    height: 40.6vh;
+
+    .main-subhead-one {
+      flex-basis: 60%;
+
+      h1 {
+        font-size: 1.3rem;
+        margin-top: 10px;
+        margin-left: 40px;
+      }
+    }
+
+    .main-subhead-two {
+      flex-basis: 40%;
+      .header-img-base {
+        flex-basis: 100%;
+        padding: 0;
+        .bwa-logo {
+          position: absolute;
+          z-index: 1;
+          display: block;
+          width: 18%;
+          height: 12.5vh; //65px;
+          right: 0px;
+        }
+        .header-img {
+          width: 100%;
+          height: 40.6vh;
+        }
+      }
+    }
+  }
+}
+
+nav {
+  .links {
+    @include flex;
+    min-height: 1.8vh;
+    background-color: $primaryColor;
+
+    .link-base {
+      flex-basis: 100%;
+
+      ul {
+        list-style-type: none;
+
+        li {
+          display: inline;
+
+          a {
+            text-decoration: none;
+            color: $secondaryColor;
+            font-size: 0.8rem;
+            margin-left: 5px;
+          }
+
+          #home {
+            color: $fauxColor;
+          }
+        }
+      }
+    }
+  }
+}
+
+section {
+  .club-guide-container {
+    @include flex;
+
+    .club-guide {
+      flex-basis: 100%;
+
+      .club-guide-base {
+        width: 80%;
+        display: flex;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 50px;
+        min-height: 21.6vh;
+        filter: box-shadow;
+
+        .club-guide-img {
+          flex-basis: 50%;
+          @include club-guide-image;
+
+          #club-guide {
+            width: 100%;
+            height: 100%;
+          }
+        }
+
+        .club-guide-content {
+          flex-basis: 50%;
+          background-color: $fauxColor;
+          @include club-guide-text;
+
+          p {
+            a {
+              text-decoration: none;
+              color: $primaryColor;
+              font-size: 0.9rem;
+              padding: 10px;
+              display: block;
+              margin-top: 15px;
+            }
+          }
+
+          span {
+            display: none;
+          }
+
+          button {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+
+  .white-space-container {
+    @include flex;
+    height: 10.3vh;
+
+    .white-space {
+      flex-basis: 100%;
+    }
+  }
+}
+
+main {
+  .onboarding-container {
+    @include flex;
+    background-color: $secondaryColor;
+
+    .onboarding-text {
+      flex-basis: 50%;
+
+      h2 {
+        color: $primaryColor;
+        margin-left: 20px;
+        margin-top: 40px;
+        font-size: 1.4rem;
+      }
+
+      button {
+        border: 1px solid $fauxColor;
+        margin-left: 20px;
+        background-color: $fauxColor;
+
+        a {
+          text-decoration: none;
+          color: $secondaryColor;
+          font-size: 0.8rem;
+          display: block;
+          text-align: center;
+        }
+      }
+    }
+
+    .onboarding-img {
+      flex-basis: 50%;
+
+      .onboarding {
+        width: 100%;
+      }
+    }
+  }
+}
+
+footer {
+  .white-space {
+    @include flex;
+    height: 10.3vh;
+
+    .white-space-base {
+      flex-basis: 100%;
+    }
+  }
+
+  .footer-container {
+    @include flex;
+    background-color: $primaryColor;
+    min-height: 10.3vh;
+
+    .footer {
+      flex-basis: 100%;
+
+      p {
+        color: $secondaryColor;
+        font-size: 1rem;
+        text-align: center;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 375px) {
+  nav {
+    .links {
+      .link-base {
+        ul {
+          li:first-child {
+            margin-left: 25px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 425px) {
+  .container {
+    max-width: 425px;
+    margin: auto;
+  }
+
+  header {
+    .main-header {
+      .main-subhead-one {
+        h1 {
+          font-size: 1.4rem;
+          margin-top: 0px;
+          margin-left: 50px;
+        }
+      }
+    }
+  }
+
+  nav {
+    .links {
+      .link-base {
+        ul {
+          li {
+            a {
+              font-size: 1rem;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  section {
+    .club-guide-container {
+      .club-guide {
+        .club-guide-base {
+          .club-guide-content {
+            p {
+              a {
+                font-size: 1.1rem;
+                text-align: center;
+                margin-top: 20px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  main {
+    .onboarding-container {
+      .onboarding-text {
+        h2 {
+          font-size: 1.8rem;
+        }
+        button {
+          padding: 5px;
+
+          a {
+            font-size: 1rem;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 571px) {
+  .container {
+    max-width: 571px;
+    margin: auto;
+  }
+
+  header {
+    .main-header {
+      height: 50.8vh;
+      .main-subhead-one {
+        h1 {
+          font-size: 1.9rem;
+          margin-left: 60px;
+        }
+      }
+
+      .main-subhead-two {
+        .header-img-base {
+          .bwa-logo {
+            width: 16%;
+            height: 13.5vh;
+          }
+
+          .header-img {
+            height: 50.8vh;
+          }
+        }
+      }
+    }
+  }
+
+  nav {
+    .links {
+      .link-base {
+        ul {
+          li {
+            a {
+              margin-left: 10px;
+            }
+          }
+          li:first-child {
+            margin-left: 65px;
+          }
+        }
+      }
+    }
+  }
+
+  section {
+    .club-guide-container {
+      .club-guide {
+        .club-guide-base {
+          .club-guide-content {
+            p {
+              a {
+                font-size: 1.4rem;
+                margin-top: 40px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  main {
+    .onboarding-container {
+      .onboarding-text {
+        h2 {
+          font-size: 2rem;
+          margin-left: 40px;
+        }
+        button {
+          padding: 7px;
+          margin-left: 40px;
+
+          a {
+            font-size: 1.2rem;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .container {
+    max-width: 768px;
+    margin: auto;
+  }
+
+  header {
+    .main-header {
+      height: 60.8vh;
+      .main-subhead-one {
+        h1 {
+          font-size: 2.3rem;
+          margin-left: 100px;
+        }
+      }
+
+      .main-subhead-two {
+        .header-img-base {
+          .bwa-logo {
+            width: 14%;
+          }
+
+          .header-img {
+            height: 60.8vh;
+          }
+        }
+      }
+    }
+  }
+
+  nav {
+    .links {
+      .link-base {
+        ul {
+          li {
+            a {
+              margin-left: 40px;
+            }
+          }
+          li:first-child {
+            margin-left: 70px;
+          }
+        }
+      }
+    }
+  }
+
+  section {
+    .club-guide-container {
+      .club-guide {
+        .club-guide-base {
+          .club-guide-content {
+            p {
+              display: none;
+            }
+
+            span {
+              display: block;
+              margin-top: 20px;
+              text-align: center;
+              color: $darkShade;
+              font-size: 1rem;
+              padding: 10px;
+            }
+
+            button {
+              display: block;
+              background-color: $primaryColor;
+              border: 2px solid $primaryColor;
+              margin-left: auto;
+              margin-right: auto;
+              padding: 10px;
+
+              a {
+                text-decoration: none;
+                color: $secondaryColor;
+                font-size: 0.8rem;
+                display: block;
+                text-align: center;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  main {
+    .onboarding-container {
+      .onboarding-text {
+        h2 {
+          font-size: 2.6rem;
+          margin-left: 60px;
+          margin-top: 60px;
+        }
+        button {
+          padding: 9px;
+          margin-left: 60px;
+
+          a {
+            font-size: 1.4rem;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 900px) {
+  .container {
+    max-width: 900px;
+    margin: auto;
+  }
+
+  header {
+    .main-header {
+      height: 70.8vh;
+      .main-subhead-one {
+        h1 {
+          font-size: 2.8rem;
+          margin-left: 120px;
+        }
+      }
+
+      .main-subhead-two {
+        .header-img-base {
+          .bwa-logo {
+            width: 12%;
+          }
+
+          .header-img {
+            height: 70.8vh;
+          }
+        }
+      }
+    }
+  }
+
+  section {
+    .club-guide-container {
+      .club-guide {
+        .club-guide-base {
+          .club-guide-content {
+            span {
+              font-size: 1.2rem;
+            }
+
+            button {
+              a {
+                font-size: 1rem;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .container {
+    max-width: 1024px;
+    margin: auto;
+  }
+
+  header {
+    .main-header {
+      height: 80.8vh;
+      .main-subhead-one {
+        h1 {
+          font-size: 3.4rem;
+          margin-left: 140px;
+          margin-top: 20px;
+        }
+      }
+
+      .main-subhead-two {
+        .header-img-base {
+          .bwa-logo {
+            width: 10%;
+          }
+
+          .header-img {
+            height: 80.8vh;
+          }
+        }
+      }
+    }
+  }
+
+  nav {
+    .links {
+      .link-base {
+        ul {
+          li {
+            a {
+              margin-left: 70px;
+              font-size: 1.3rem;
+            }
+          }
+          li:first-child {
+            margin-left: 80px;
+          }
+        }
+      }
+    }
+  }
+
+  section {
+    .club-guide-container {
+      .club-guide {
+        .club-guide-base {
+          .club-guide-content {
+            span {
+              font-size: 1.4rem;
+              margin-top: 40px;
+            }
+
+            button {
+              a {
+                font-size: 1.2rem;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  main {
+    .onboarding-container {
+      .onboarding-text {
+        h2 {
+          font-size: 3.2rem;
+          margin-left: 70px;
+          margin-top: 100px;
+        }
+        button {
+          padding: 11px;
+          margin-left: 70px;
+
+          a {
+            font-size: 1.6rem;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 1440px) {
+  .container {
+    max-width: 1440px;
+    margin: auto;
+  }
+
+  header {
+    .main-header {
+      .main-subhead-one {
+        h1 {
+          font-size: 4.3rem;
+          margin-left: 200px;
+          margin-top: 30px;
+        }
+      }
+
+      .main-subhead-two {
+        .header-img-base {
+          .bwa-logo {
+            width: 8%;
+          }
+        }
+      }
+    }
+  }
+
+  nav {
+    .links {
+      .link-base {
+        ul {
+          li {
+            a {
+              margin-left: 100px;
+              font-size: 1.6rem;
+            }
+          }
+          li:first-child {
+            margin-left: 100px;
+          }
+        }
+      }
+    }
+  }
+
+  section {
+    .club-guide-container {
+      .club-guide {
+        .club-guide-base {
+          .club-guide-content {
+            span {
+              font-size: 1.8rem;
+              margin-top: 60px;
+            }
+
+            button {
+              a {
+                font-size: 1.4rem;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  main {
+    .onboarding-container {
+      .onboarding-text {
+        h2 {
+          font-size: 4.5rem;
+          margin-left: 90px;
+          margin-top: 140px;
+        }
+        button {
+          padding: 13px;
+          margin-left: 90px;
+
+          a {
+            font-size: 1.8rem;
+          }
+        }
+      }
+    }
+  }
+
+  footer {
+    .footer-container {
+      .footer {
+        p {
+          font-size: 1.4rem;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 2560px) {
+  .container {
+    max-width: 2560px;
+    margin: auto;
+  }
+
+  header {
+    .main-header {
+      .main-subhead-one {
+        h1 {
+          font-size: 7.5rem;
+          margin-left: 240px;
+          margin-top: 100px;
+        }
+      }
+
+      .main-subhead-two {
+        .header-img-base {
+          .bwa-logo {
+            width: 6%;
+          }
+        }
+      }
+    }
+  }
+
+  nav {
+    .links {
+      .link-base {
+        ul {
+          li {
+            a {
+              margin-left: 150px;
+              font-size: 2.3rem;
+            }
+          }
+          li:first-child {
+            margin-left: 150px;
+          }
+        }
+      }
+    }
+  }
+
+  section {
+    .club-guide-container {
+      .club-guide {
+        .club-guide-base {
+          .club-guide-content {
+            span {
+              font-size: 2.8rem;
+              margin-top: 30%;
+            }
+
+            button {
+              a {
+                font-size: 1.8rem;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  main {
+    .onboarding-container {
+      .onboarding-text {
+        h2 {
+          font-size: 9rem;
+          margin-left: 120px;
+          margin-top: 250px;
+        }
+        button {
+          padding: 20px;
+          margin-left: 120px;
+
+          a {
+            font-size: 4rem;
+          }
+        }
+      }
+    }
+  }
+
+  footer {
+    .footer-container {
+      .footer {
+        p {
+          font-size: 2.5rem;
+        }
+      }
+    }
+  }
+}

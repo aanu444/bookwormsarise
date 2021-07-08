@@ -1,0 +1,16 @@
+{
+    "name": "Bookworms Arise Bookclub",
+    "short_name": "BWA",
+    "start_url": "index.html",
+    "display": "standalone",
+    "background-color": "#140d2e",
+    "theme_color": "#140d2e",
+    "orientation": "portrait-primary",
+    "icons":[
+        {
+            "src": "images/logo.png",
+            "type":"image/png",
+            "sizes":"500*500"
+        }
+    ]
+}
