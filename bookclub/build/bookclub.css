@@ -390,6 +390,12 @@ footer .footer .footer-base p {
   font-size: 1rem;
 }
 
+@media only screen and (min-width: 360px) {
+  header .slider .slider-base figure .slider-img:first-child {
+    margin-left: -3.05%;
+  }
+}
+
 @media only screen and (min-width: 375px) {
   nav .links .link-base ul li a {
     margin-left: 14px;
